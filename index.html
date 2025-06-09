@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Video Background</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Video Background */
+    .video-background {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    video.bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center; /* Default: center for both desktop and mobile */
+    }
+
+    /* Overlay Content */
+    .overlay {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+
+    .enter-button {
+      padding: 1rem 2rem;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border: 2px solid white;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .enter-button:hover {
+      background: rgba(255, 255, 255, 0.9);
+      color: black;
+    }
+
+    /* Responsive: adjust button and ensure centered video on small screens */
+    @media (max-width: 600px) {
+      .enter-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+      }
+
+      video.bg-video {
+        object-position: center center; /* Reinforce for mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-background">
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="base.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+
+    <div class="overlay">
+      <a href="index1.html" class="enter-button">Click to Enter</a>
+    </div>
+  </div>
+
+  <script>
+    // Optional: Log when button is clicked
+    document.querySelector('.enter-button').addEventListener('click', function () {
+      console.log('Enter button clicked!');
+    });
+  </script>
+
+</body>
+</html>

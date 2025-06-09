@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Base Systems - Book a Consultation</title>
+ <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.2/build/spline-viewer.js"></script>
+
+  <style>
+    @font-face {
+      font-family: 'ndot57';
+      src: url('ndot57.ttf') format('truetype');
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'ndot57', sans-serif;
+      background-color: black;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Fullscreen spline background with no gaps */
+    spline-viewer {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none; /* Allows form elements to be interactable */
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    form {
+      width: 100%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    input, textarea {
+      background: transparent;
+      color: white;
+      border: 1px solid #555;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    input:hover, textarea:hover {
+      border-color: white;
+    }
+
+    input:focus, textarea:focus {
+      border-color: white;
+    }
+
+    button {
+      padding: 14px;
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #fff;
+      color: #000;
+      transform: scale(1.03);
+    }
+
+    .contact-info {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .contact-info p {
+      margin: 4px 0;
+    }
+
+     .back-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+      color: #aaa;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      color: #fff;
+    }
+
+ @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      form {
+        max-width: 90%;
+        padding: 20px;
+      }
+
+      input, textarea {
+        font-size: 0.95rem;
+      }
+
+      button {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .contact-info p {
+        font-size: 0.8rem;
+      }
+
+      .back-btn {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Fullscreen Spline Background -->
+  
+<spline-viewer url="https://prod.spline.design/n2d692u1LOAPPOAm/scene.splinecode"></spline-viewer>
+  <!-- Foreground Content -->
+  <div class="content">
+    <h1>Book a Consultation</h1>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Submit Consultation</button>
+    </form>
+
+    <div class="contact-info">
+      <p><strong>Phone:</strong> 01872 272215</p>
+      <p><strong>Address:</strong> 1ST FLOOR, 26 BOSCAWEN ST. TRURO, TR1 2QQ</p>
+      <p><strong>Hours:</strong> MON - SAT : 9:30 - 5:30</p>
+      <a href="index1.html" class="back-btn">← Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
